@@ -3,7 +3,7 @@ const validation = (schema) => {
     const { error } = schema.validate(req.body)
     if (error) {
       return res.status(400).json({
-        message: error.message
+        message: 'Помилка від Joi або іншої бібліотеки валідації'
       })
     }
     next()
